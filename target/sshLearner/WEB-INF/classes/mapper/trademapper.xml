@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.TradeDao">
+    <select id="getUserTradeList" resultType="Trade">
+        select * from srproject.trade where userid = #{userid}
+    </select>
+    <select id="getUserTradeById" resultType="Trade">
+        select * from srproject.trade where userid = #{userid} and stockid = #{stockid}
+    </select>
+    <update id="updateTrade">
+        update srproject.trade
+        set amount = #{amount}
+        where userid = #{userid} and stockid = #{stockid}
+    </update>
+    <insert id="openTrade">
+        insert into srproject.trade(userid,stockid,amount)
+        values (#{userid}, #{stockid}, #{amount})
+    </insert>
+    <insert id="deleteTrade">
+        delete from srproject.trade
+        where userid = #{userid} and stockid = #{stockid}
+    </insert>
+</mapper>

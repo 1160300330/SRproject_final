@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <title>Zegva - Responsive Admin & Dashboard Template | Themesdesign</title>
+    <meta content="Responsive admin theme build on top of Bootstrap 4" name="description">
+    <meta content="Themesdesign" name="author">
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <link th:href="@{/static/css/bootstrap-datepicker.min.css}" rel="stylesheet">
+
+    <link th:href="@{/static/css/bootstrap.min.css}" rel="stylesheet" type="text/css">
+    <link th:href="@{/static/css/metismenu.min.css}" rel="stylesheet" type="text/css">
+    <link th:href="@{/static/css/icons.css}" rel="stylesheet" type="text/css">
+    <link th:href="@{/static/css/style.css}" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+    <div class="header-bg">
+        <!-- Navigation Bar-->
+        <header id="topnav">
+            <div class="topbar-main">
+                <div class="container-fluid">
+                    <!-- Logo-->
+
+                    <!-- End Logo-->
+
+                    <div class="menu-extras topbar-custom navbar p-0">
+
+                        <ul>
+
+                            <h3 style="text-decoration:none;font-size:40px;color:#333;text-align:left;font-family:黑体,Times,serif;">股票模拟交易市场</h3>
+
+                        </ul>
+
+
+
+                        <!-- Search input -->
+
+
+                        <div class="search-wrap" id="search-wrap">
+                            <div class="search-bar">
+                                <input class="search-input" type="search" placeholder="Search">
+                                <a href="#" class="close-search toggle-search" data-target="#search-wrap">
+                                    <i class="mdi mdi-close-circle"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <ul class="navbar-right ml-auto list-inline float-right mb-0">
+
+                            <li class="list-inline-item dropdown notification-list d-none d-md-inline-block">
+                                <a class="nav-link waves-effect toggle-search" href="#" data-target="#search-wrap">
+                                    <i class="fas fa-search noti-icon"></i>
+                                </a>
+                            </li>
+
+
+
+
+                            <!-- full screen -->
+                            <li class="dropdown notification-list list-inline-item d-none d-md-inline-block">
+                                <a class="nav-link waves-effect" href="#" id="btn-fullscreen">
+                                    <i class="fas fa-expand noti-icon"></i>
+                                </a>
+                            </li>
+
+                            <!-- notification -->
+                            <li class="dropdown notification-list list-inline-item">
+                                <a class="nav-link dropdown-toggle arrow-none waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                                    <i class="fas fa-bell noti-icon"></i>
+                                    <span class="badge badge-pill badge-danger noti-icon-badge">3</span>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right dropdown-menu-animated dropdown-menu-lg px-1">
+                                    <!-- item-->
+                                    <h6 class="dropdown-item-text">
+                                        Notifications
+                                    </h6>
+                                    <div class="slimscroll notification-item-list">
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item active">
+                                            <div class="notify-icon bg-success"><i class="mdi mdi-cart-outline"></i></div>
+                                            <p class="notify-details"><b>Your order is placed</b><span class="text-muted">Dummy text of the printing and typesetting industry.</span></p>
+                                        </a>
+
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            <div class="notify-icon bg-danger"><i class="mdi mdi-message-text-outline"></i></div>
+                                            <p class="notify-details"><b>New Message received</b><span class="text-muted">You have 87 unread messages</span></p>
+                                        </a>
+
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            <div class="notify-icon bg-info"><i class="mdi mdi-filter-outline"></i></div>
+                                            <p class="notify-details"><b>Your item is shipped</b><span class="text-muted">It is a long established fact that a reader will</span></p>
+                                        </a>
+
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            <div class="notify-icon bg-success"><i class="mdi mdi-message-text-outline"></i></div>
+                                            <p class="notify-details"><b>New Message received</b><span class="text-muted">You have 87 unread messages</span></p>
+                                        </a>
+
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            <div class="notify-icon bg-warning"><i class="mdi mdi-cart-outline"></i></div>
+                                            <p class="notify-details"><b>Your order is placed</b><span class="text-muted">Dummy text of the printing and typesetting industry.</span></p>
+                                        </a>
+
+                                    </div>
+                                    <!-- All-->
+                                    <a href="javascript:void(0);" class="dropdown-item text-center notify-all text-primary">
+                                        View all <i class="fi-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </li>
+
+                            <li style="float: right;" class="dropdown notification-list list-inline-item">
+                                <div class="dropdown notification-list nav-pro-img">
+                                    <a class="dropdown-toggle nav-link arrow-none waves-effect nav-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                                        <img th:src="@{/static/picture/user-1.jpg}" alt="user" class="rounded-circle">
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-animated profile-dropdown">
+                                        <!-- item-->
+                                        <a class="dropdown-item" href="#"><i class="mdi mdi-account-circle"></i> Profile</a>
+                                        <a class="dropdown-item" href="#"><i class="mdi mdi-wallet"></i> My Wallet</a>
+                                        <a class="dropdown-item d-block" href="#"><span class="badge badge-success float-right">11</span><i class="mdi mdi-settings"></i> Settings</a>
+                                        <a class="dropdown-item" href="#"><i class="mdi mdi-lock-open-outline"></i> Lock screen</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item text-danger" style="cursor: pointer;" onclick="logout()"><i class="mdi mdi-power text-danger"></i> Logout</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="menu-item dropdown notification-list list-inline-item">
+                                <!-- Mobile menu toggle-->
+                                <a class="navbar-toggle nav-link">
+                                    <div class="lines">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </a>
+                                <!-- End mobile menu toggle-->
+                            </li>
+
+                        </ul>
+
+                    </div>
+                    <!-- end menu-extras -->
+
+                    <div class="clearfix"></div>
+
+                </div>
+                <!-- end container -->
+            </div>
+            <!-- end topbar-main -->
+
+            <!-- start content -->
+            <div class="bg-dark">
+                <div class="container-fluid">
+                    <div class="row align-items-center ">
+                        <div class="col-md-8">
+                            <div class="page-title-box">
+                                <h4 class="page-title">Data Table</h4>
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item">
+                                        <a href="/newPage">首页</a>
+                                    </li>
+<!--                                    <li class="breadcrumb-item">-->
+<!--                                        <a href="/stock/queryPage">查询</a>-->
+<!--                                    </li>-->
+                                    <li class="breadcrumb-item active">查询</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="float-right d-none d-md-block app-datepicker">
+                                <input type="text" class="form-control" data-date-format="MM dd, yyyy" readonly="readonly" id="datepicker">
+                                <i class="mdi mdi-chevron-down mdi-drop"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row top-content">
+                        <div class="col-sm-6 col-xl-3">
+                            <div class="row align-items-center p-1">
+                                <div class="col-lg-6">
+                                    <h5 class="font-16 text-white">Total Expenses</h5>
+                                    <h4 class="text-info pt-1 mb-0">$67,670</h4>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div id="chart1"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-xl-3">
+                            <div class="row align-items-center p-1">
+                                <div class="col-lg-6">
+                                    <h5 class="font-16 text-white">Total Invoice</h5>
+                                    <h4 class="text-warning pt-1 mb-0">$7,360</h4>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div id="chart2"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-xl-3">
+                            <div class="row align-items-center p-1">
+                                <div class="col-lg-6">
+                                    <h5 class="font-16 text-white">Amount Due</h5>
+                                    <h4 class="text-primary pt-1 mb-0">$5000</h4>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div id="chart3"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-xl-3">
+
+                            <div class="row align-items-center p-1">
+                                <div class="col-lg-6">
+                                    <h5 class="font-16 text-white">Unpaid Invoices</h5>
+                                    <h4 class="text-danger pt-1 mb-0">$2,480</h4>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div id="chart4"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end content -->
+
+            <!-- MENU Start -->
+            <div class="navbar-custom">
+                <div class="container-fluid">
+                </div>
+                <!-- end container -->
+            </div>
+            <!-- end navbar-custom -->
+        </header>
+        <!-- End Navigation Bar-->
+
+    </div>
+    <!-- header-bg -->
+
+    <div class="wrapper">
+        <div class="container-fluid">
+
+            <div class="row">
+
+                <div class="col-md-6">
+
+                    <div class="card">
+                        <div class="card-body">
+
+                            <h4 class="mt-0 header-title">按代码查询</h4>
+                            <div class="form-group row">
+                                <label for="card1-code" class="col-sm-2 col-form-label">股票代码</label>
+                                <div class="col-sm-10">
+                                    <input id="card1-code" class="form-control" type="search" placeholder="请输入数字" name="StockID">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="card1-startDate" class="col-sm-2 col-form-label">起始时间</label>
+                                <div class="col-sm-10">
+                                    <input id="card1-startDate" class="form-control" type="date" name="StartDate">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="card1-endDate" class="col-sm-2 col-form-label">结束时间</label>
+                                <div class="col-sm-10">
+                                    <input id="card1-endDate" class="form-control" type="date" name="EndDate">
+                                </div>
+                            </div>
+                            <button type="button" onclick="queryByIDDate()" class="btn btn-secondary btn-lg btn-block waves-effect waves-light">查询</button>
+
+                        </div>
+                    </div>
+
+                </div>
+                <!-- end col -->
+
+                <div class="col-md-6">
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="mt-0 header-title">按股票名称查询</h4>
+                            <div class="form-group row">
+                                <label for="card2-name" class="col-sm-2 col-form-label">股票名称</label>
+                                <div class="col-sm-10">
+                                    <input id="card2-name" class="form-control" type="search" placeholder="请输入待查询的股票名称" name="StockName">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="card2-startDate" class="col-sm-2 col-form-label">起始时间</label>
+                                <div class="col-sm-10">
+                                    <input class="form-control" type="date" name="StartDate" id="card2-startDate">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="card2-endDate" class="col-sm-2 col-form-label">结束时间</label>
+                                <div class="col-sm-10">
+                                    <input class="form-control" type="date" name="EndDate" id="card2-endDate">
+                                </div>
+                            </div>
+                            <button type="button" onclick="queryByNameDate()" class="btn btn-secondary btn-lg btn-block waves-effect waves-light">查询</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- end col -->
+            </div>
+            <!-- end row -->
+
+            <div class="row">
+
+                <div class="col-md-6">
+
+                    <div class="card">
+                        <div class="card-body">
+
+                            <h4 class="mt-0 header-title">按代码查询</h4>
+                            <div class="form-group row">
+                                <label for="card3-num" class="col-sm-2 col-form-label">股票代码</label>
+                                <div class="col-sm-10">
+                                    <input class="form-control" type="search" placeholder="请输入数字" name="StockID" id="card3-num">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="card3-number" class="col-sm-2 col-form-label">查询条数</label>
+                                <div class="col-sm-10">
+                                    <input class="form-control" type="number"  placeholder="请输入小于1000的数字" id="card3-number">
+                                </div>
+                            </div>
+
+                            <button type="button" onclick="queryByIDNum()" class="btn btn-secondary btn-lg btn-block waves-effect waves-light">查询</button>
+
+                        </div>
+                    </div>
+
+                </div>
+                <!-- end col -->
+
+                <div class="col-md-6">
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="mt-0 header-title">按股票名称查询</h4>
+                            <div class="form-group row">
+                                <label for="card4-name" class="col-sm-2 col-form-label">股票名称</label>
+                                <div class="col-sm-10">
+                                    <input class="form-control" type="search" placeholder="请输入待查询的股票名称" name="StockName" id="card4-name">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="card4-number" class="col-sm-2 col-form-label">查询条数</label>
+                                <div class="col-sm-10">
+                                    <input class="form-control" type="number"  placeholder="请输入小于1000的数字" id="card4-number">
+                                </div>
+                            </div>
+                            <button type="button" onclick="queryByNameNum()" class="btn btn-secondary btn-lg btn-block waves-effect waves-light">查询</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- end col -->
+            </div>
+
+            <!-- end row -->
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card card-body">
+                        <h4 class="card-title font-16 mt-0">查看股票变化趋势</h4>
+                        <p class="card-text">
+                        </p>
+                        <div class="form-group row">
+                            <label for="card1-code" class="col-sm-2 col-form-label">股票代码</label>
+                            <div class="col-sm-10">
+                                <input id="card5-code" class="form-control" type="search" placeholder="请输入股票代码" name="StockID">
+                            </div>
+                        </div>
+<!--                        <a href="#" class="btn btn-primary waves-effect waves-light">查询</a>-->
+                        <div class="button-items">
+                            <button type="button" onclick="queryByIDRealtime()"  class="btn btn-outline-primary waves-effect waves-light">查询信息</button>
+                            <button type="button" onclick="queryByIDRealtimePicMin()" class="btn btn-outline-secondary waves-effect">时分K</button>
+                            <button type="button" onclick="queryByIDRealtimePicDaily()" class="btn btn-outline-success waves-effect waves-light">日K</button>
+                            <button type="button" onclick="queryByIDRealtimePicWeek()" class="btn btn-outline-info waves-effect waves-light">周K</button>
+                            <button type="button" onclick="queryByIDRealtimePicMonth()" class="btn btn-outline-warning waves-effect waves-light">月K</button>
+
+                        </div>
+                    </div>
+                </div>
+
+<!--                <div class="col-xl-4 ">-->
+<!--                    <div class="card card-body text-center">-->
+<!--                        <h4 class="card-title font-16 mt-0">Special title treatment</h4>-->
+<!--                        <p class="card-text">With supporting text below as a natural lead-in to additional content.-->
+<!--                        </p>-->
+<!--                        <a href="#" class="btn btn-primary waves-effect waves-light">Go somewhere</a>-->
+<!--                    </div>-->
+<!--                </div>-->
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card card-body">
+                        <h4 class="card-title font-16 mt-0">实时股票行情查询</h4>
+                        <p class="card-text">
+                        </p>
+                        <a href="http://data.eastmoney.com/center/" class="btn btn-secondary btn-lg btn-block waves-effect waves-light">一键查看</a>
+                    </div>
+                </div>
+
+                <!--                <div class="col-xl-4 ">-->
+                <!--                    <div class="card card-body text-center">-->
+                <!--                        <h4 class="card-title font-16 mt-0">Special title treatment</h4>-->
+                <!--                        <p class="card-text">With supporting text below as a natural lead-in to additional content.-->
+                <!--                        </p>-->
+                <!--                        <a href="#" class="btn btn-primary waves-effect waves-light">Go somewhere</a>-->
+                <!--                    </div>-->
+                <!--                </div>-->
+            </div>
+
+            <!-- end row -->
+        </div>
+        <!-- end container-fluid -->
+    </div>
+    <!-- end wrapper -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        © 2019 Zegva <span class="d-none d-sm-inline-block"> - Crafted with <i class="mdi mdi-heart text-danger"></i> By <a href="/">bootstrapmb</a></span>.
+    </footer>
+
+    <!-- End Footer -->
+
+    <!-- jQuery  -->
+   <script th:src="@{/static/js/jquery.min.js}"></script>
+   <script th:src="@{/static/js/bootstrap.bundle.min.js}"></script>
+   <script th:src="@{/static/js/jquery.slimscroll.js}"></script>
+   <script th:src="@{/static/js/waves.min.js}"></script>
+
+   <script th:src="@{/static/js/apexcharts.min.js}"></script>
+   <script th:src="@{/static/js/bootstrap-datepicker.min.js}"></script>
+
+    <!-- App js -->
+   <script th:src="@{/static/js/app.js}"></script>
+    <script type="text/javascript">
+        function queryByIDDate() {
+            var code = $('#card1-code').val();
+            var startDate = $('#card1-startDate').val().replace('/','-');
+            var endDate = $('#card1-endDate').val().replace('/','-');
+            if(code === '' || code === undefined || startDate === '' || startDate === undefined || endDate === '' || endDate === undefined) {
+                alert("输入不能为空！");
+                return;
+            }
+            $.ajax({
+                url: "/stock/queryByIDDate",
+                type: 'GET',
+                data: {
+                    StockID: $('#card1-code').val(),
+                    StartDate: $('#card1-startDate').val(),
+                    EndDate: $('#card1-endDate').val(),
+                },
+                contentType: 'application/json;charset=utf-8',
+                dataType: "text",
+                success: function(data){
+                    window.location.href = "/stock/stockHistory"
+                },
+                error: function (xhr, textStatus, errorThrown) {
+                    /*错误信息处理*/
+                    alert("进入error---");
+                    alert("状态码：" + xhr.status);
+                    alert("状态:"+ xhr.readyState);//当前状态,0-未初始化，1-正在载入，2-已经载入，3-数据进行交互，4-完成。
+                    alert("错误信息:"+ xhr.statusText );
+                    alert("返回响应信息："+ xhr.responseText );//这里是详细的信息
+                    alert("请求状态："+textStatus);
+                    alert(errorThrown);
+                    alert("请求失败");
+                },
+            });
+        }
+        function queryByIDNum() {
+            var num = $('#card3-num').val();
+            var number = $('#card3-number').val();
+            if(num === '' || num === undefined || number === '' || number === undefined) {
+                alert("输入不能为空！");
+                return;
+            }
+            $.ajax({
+                url: "/stock/queryByIDNum",
+                type: 'GET',
+                data: {
+                    StockID: num,
+                    Rows: number,
+                },
+                contentType: 'application/json;charset=utf-8',
+                dataType: "text",
+                success: function(data){
+                    window.location.href = "/stock/stockHistory"
+                },
+                error: function (xhr, textStatus, errorThrown) {
+                    /*错误信息处理*/
+                    alert("进入error---");
+                    alert("状态码：" + xhr.status);
+                    alert("状态:"+ xhr.readyState);//当前状态,0-未初始化，1-正在载入，2-已经载入，3-数据进行交互，4-完成。
+                    alert("错误信息:"+ xhr.statusText );
+                    alert("返回响应信息："+ xhr.responseText );//这里是详细的信息
+                    alert("请求状态："+textStatus);
+                    alert(errorThrown);
+                    alert("请求失败");
+                },
+            });
+        }
+        function queryByNameDate() {
+            var name = $('#card2-name').val();
+            var startDate = $('#card2-startDate').val().replace('/','-');
+            var endDate = $('#card2-endDate').val().replace('/','-');
+            if(name === '' || name === undefined || startDate === '' || startDate === undefined || endDate === '' || endDate === undefined) {
+                alert("输入不能为空！");
+                return;
+            }
+            $.ajax({
+                url: "/stock/queryByNameDate",
+                type: 'GET',
+                data: {
+                    StockName: name,
+                    StartDate: startDate,
+                    EndDate: endDate,
+                },
+                contentType: 'application/json;charset=utf-8',
+                dataType: "text",
+                success: function(data){
+                    window.location.href = "/stock/stockHistory"
+                },
+                error: function (xhr, textStatus, errorThrown) {
+                    /*错误信息处理*/
+                    alert("进入error---");
+                    alert("状态码：" + xhr.status);
+                    alert("状态:"+ xhr.readyState);//当前状态,0-未初始化，1-正在载入，2-已经载入，3-数据进行交互，4-完成。
+                    alert("错误信息:"+ xhr.statusText );
+                    alert("返回响应信息："+ xhr.responseText );//这里是详细的信息
+                    alert("请求状态："+textStatus);
+                    alert(errorThrown);
+                    alert("请求失败");
+                },
+            });
+        }
+        function queryByNameNum() {
+            var name = $('#card4-name').val();
+            var number = $('#card4-number').val()
+            if(name === '' || name === undefined || number === '' || number === undefined) {
+                alert("输入不能为空！");
+                return;
+            }
+            $.ajax({
+                url: "/stock/queryByNameNum",
+                type: 'GET',
+                data: {
+                    StockName: name,
+                    Rows: number,
+                },
+                contentType: 'application/json;charset=utf-8',
+                dataType: "text",
+                success: function(data){
+                    window.location.href = "/stock/stockHistory"
+                },
+                error: function (xhr, textStatus, errorThrown) {
+                    /*错误信息处理*/
+                    alert("进入error---");
+                    alert("状态码：" + xhr.status);
+                    alert("状态:"+ xhr.readyState);//当前状态,0-未初始化，1-正在载入，2-已经载入，3-数据进行交互，4-完成。
+                    alert("错误信息:"+ xhr.statusText );
+                    alert("返回响应信息："+ xhr.responseText );//这里是详细的信息
+                    alert("请求状态："+textStatus);
+                    alert(errorThrown);
+                    alert("请求失败");
+                },
+            });
+        }
+        function queryByIDRealtime()
+        {
+            window.location.href = "/stock/realtimeStock/" + $('#card5-code').val();
+        }
+        function queryByIDRealtimePicDaily()
+        {
+            window.location.href = "/stock/realtimeStockPicDaily/" + $('#card5-code').val();
+        }
+        function queryByIDRealtimePicMin()
+        {
+            window.location.href = "/stock/realtimeStockPicMin/" + $('#card5-code').val();
+        }
+        function queryByIDRealtimePicWeek()
+        {
+            window.location.href = "/stock/realtimeStockPicWeek/" + $('#card5-code').val();
+        }
+        function queryByIDRealtimePicMonth()
+        {
+            window.location.href = "/stock/realtimeStockPicMonth/" + $('#card5-code').val();
+        }
+
+    </script>
+
+</body>
+<!--<style>-->
+<!--    .btn-block {-->
+<!--        background-color: #F28665;-->
+<!--    }-->
+<!--</style>-->
+</html>

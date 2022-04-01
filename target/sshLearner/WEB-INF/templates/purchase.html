@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <title>Zegva - Responsive Admin & Dashboard Template | Themesdesign</title>
+    <meta content="Responsive admin theme build on top of Bootstrap 4" name="description">
+    <meta content="Themesdesign" name="author">
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <link th:href="@{/static/css/bootstrap-datepicker.min.css}" rel="stylesheet">
+
+    <!-- DataTables -->
+    <link th:href="@{/static/css/dataTables.bootstrap4.min.css}" rel="stylesheet" type="text/css">
+    <link th:href="@{/static/css/buttons.bootstrap4.min.css}" rel="stylesheet" type="text/css">
+
+    <!-- Responsive datatable examples -->
+    <link th:href="@{/static/css/responsive.bootstrap4.min.css}" rel="stylesheet" type="text/css">
+
+    <link th:href="@{/static/css/bootstrap.min.css}" rel="stylesheet" type="text/css">
+    <link th:href="@{/static/css/metismenu.min.css}" rel="stylesheet" type="text/css">
+    <link th:href="@{/static/css/icons.css}" rel="stylesheet" type="text/css">
+    <link th:href="@{/static/css/style.css}" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+<div class="header-bg">
+    <!-- Navigation Bar-->
+    <header id="topnav">
+        <div class="topbar-main">
+            <div class="container-fluid">
+                <!-- Logo-->
+
+                <!-- End Logo-->
+
+                <div class="menu-extras topbar-custom navbar p-0">
+
+                    <ul>
+
+                        <h3 style="text-decoration:none;font-size:40px;color:#333;text-align:left;font-family:黑体,Times,serif;">股票模拟交易市场</h3>
+
+                    </ul>
+
+
+
+                    <!-- Search input -->
+
+
+                    <div class="search-wrap" id="search-wrap">
+                        <div class="search-bar">
+                            <input class="search-input" type="search" placeholder="Search">
+                            <a href="#" class="close-search toggle-search" data-target="#search-wrap">
+                                <i class="mdi mdi-close-circle"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <ul class="navbar-right ml-auto list-inline float-right mb-0">
+
+                        <li class="list-inline-item dropdown notification-list d-none d-md-inline-block">
+                            <a class="nav-link waves-effect toggle-search" href="#" data-target="#search-wrap">
+                                <i class="fas fa-search noti-icon"></i>
+                            </a>
+                        </li>
+
+
+
+
+                        <!-- full screen -->
+                        <li class="dropdown notification-list list-inline-item d-none d-md-inline-block">
+                            <a class="nav-link waves-effect" href="#" id="btn-fullscreen">
+                                <i class="fas fa-expand noti-icon"></i>
+                            </a>
+                        </li>
+
+                        <!-- notification -->
+                        <li class="dropdown notification-list list-inline-item">
+                            <a class="nav-link dropdown-toggle arrow-none waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                                <i class="fas fa-bell noti-icon"></i>
+                                <span class="badge badge-pill badge-danger noti-icon-badge">3</span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-animated dropdown-menu-lg px-1">
+                                <!-- item-->
+                                <h6 class="dropdown-item-text">
+                                    Notifications
+                                </h6>
+                                <div class="slimscroll notification-item-list">
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item active">
+                                        <div class="notify-icon bg-success"><i class="mdi mdi-cart-outline"></i></div>
+                                        <p class="notify-details"><b>Your order is placed</b><span class="text-muted">Dummy text of the printing and typesetting industry.</span></p>
+                                    </a>
+
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <div class="notify-icon bg-danger"><i class="mdi mdi-message-text-outline"></i></div>
+                                        <p class="notify-details"><b>New Message received</b><span class="text-muted">You have 87 unread messages</span></p>
+                                    </a>
+
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <div class="notify-icon bg-info"><i class="mdi mdi-filter-outline"></i></div>
+                                        <p class="notify-details"><b>Your item is shipped</b><span class="text-muted">It is a long established fact that a reader will</span></p>
+                                    </a>
+
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <div class="notify-icon bg-success"><i class="mdi mdi-message-text-outline"></i></div>
+                                        <p class="notify-details"><b>New Message received</b><span class="text-muted">You have 87 unread messages</span></p>
+                                    </a>
+
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <div class="notify-icon bg-warning"><i class="mdi mdi-cart-outline"></i></div>
+                                        <p class="notify-details"><b>Your order is placed</b><span class="text-muted">Dummy text of the printing and typesetting industry.</span></p>
+                                    </a>
+
+                                </div>
+                                <!-- All-->
+                                <a href="javascript:void(0);" class="dropdown-item text-center notify-all text-primary">
+                                    View all <i class="fi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </li>
+
+                        <li style="float: right;" class="dropdown notification-list list-inline-item">
+                            <div class="dropdown notification-list nav-pro-img">
+                                <a class="dropdown-toggle nav-link arrow-none waves-effect nav-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                                    <img th:src="@{/static/picture/user-1.jpg}" alt="user" class="rounded-circle">
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right dropdown-menu-animated profile-dropdown">
+                                    <!-- item-->
+                                    <a class="dropdown-item" href="#"><i class="mdi mdi-account-circle"></i> Profile</a>
+                                    <a class="dropdown-item" href="#"><i class="mdi mdi-wallet"></i> My Wallet</a>
+                                    <a class="dropdown-item d-block" href="#"><span class="badge badge-success float-right">11</span><i class="mdi mdi-settings"></i> Settings</a>
+                                    <a class="dropdown-item" href="#"><i class="mdi mdi-lock-open-outline"></i> Lock screen</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item text-danger" style="cursor: pointer;" onclick="logout()"><i class="mdi mdi-power text-danger"></i> Logout</a>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="menu-item dropdown notification-list list-inline-item">
+                            <!-- Mobile menu toggle-->
+                            <a class="navbar-toggle nav-link">
+                                <div class="lines">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </a>
+                            <!-- End mobile menu toggle-->
+                        </li>
+
+                    </ul>
+
+                </div>
+                <!-- end menu-extras -->
+
+                <div class="clearfix"></div>
+
+            </div>
+            <!-- end container -->
+        </div>
+        <!-- end topbar-main -->
+
+        <!-- start content -->
+        <div class="bg-dark">
+            <div class="container-fluid">
+                <div class="row align-items-center ">
+                    <div class="col-md-8">
+                        <div class="page-title-box">
+                            <h4 class="page-title">Data Table</h4>
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item">
+                                    <a href="/newPage">首页</a>
+                                </li>
+                                <!--                                    <li class="breadcrumb-item">-->
+                                <!--                                        <a href="/stock/queryPage">查询</a>-->
+                                <!--                                    </li>-->
+                                <li class="breadcrumb-item active">查询</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="float-right d-none d-md-block app-datepicker">
+                            <input type="text" class="form-control" data-date-format="MM dd, yyyy" readonly="readonly" id="datepicker">
+                            <i class="mdi mdi-chevron-down mdi-drop"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row top-content">
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="row align-items-center p-1">
+                            <div class="col-lg-6">
+                                <h5 class="font-16 text-white">Total Expenses</h5>
+                                <h4 class="text-info pt-1 mb-0">$67,670</h4>
+                            </div>
+                            <div class="col-lg-6">
+                                <div id="chart1"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="row align-items-center p-1">
+                            <div class="col-lg-6">
+                                <h5 class="font-16 text-white">Total Invoice</h5>
+                                <h4 class="text-warning pt-1 mb-0">$7,360</h4>
+                            </div>
+                            <div class="col-lg-6">
+                                <div id="chart2"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="row align-items-center p-1">
+                            <div class="col-lg-6">
+                                <h5 class="font-16 text-white">Amount Due</h5>
+                                <h4 class="text-primary pt-1 mb-0">$5000</h4>
+                            </div>
+                            <div class="col-lg-6">
+                                <div id="chart3"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-xl-3">
+
+                        <div class="row align-items-center p-1">
+                            <div class="col-lg-6">
+                                <h5 class="font-16 text-white">Unpaid Invoices</h5>
+                                <h4 class="text-danger pt-1 mb-0">$2,480</h4>
+                            </div>
+                            <div class="col-lg-6">
+                                <div id="chart4"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end content -->
+
+        <!-- MENU Start -->
+        <div class="navbar-custom">
+            <div class="container-fluid">
+            </div>
+            <!-- end container -->
+        </div>
+        <!-- end navbar-custom -->
+    </header>
+    <!-- End Navigation Bar-->
+
+</div>
+<!-- header-bg -->
+
+<div class="wrapper">
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body">
+
+                                    <h4 class="mt-0 header-title">搜索结果</h4>
+                                    <p class="sub-title">所有股票信息显示如下：
+                                    </p>
+
+                                    <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                                        <thead>
+                                        <tr>
+                                            <th style="text-align: center">股票编号</th>
+                                            <th style="text-align: center">股票价格</th>
+                                            <th style="text-align: center">股票名称</th>
+                                            <th style="text-align: center">股票涨跌</th>
+                                            <th style="text-align: center">操作</th>
+                                        </tr>
+                                        </thead>
+
+                                        <tbody>
+                                        <tr th:each="m : ${list}"><!-- 其中m是个临时变量，像for(User u : userList)那样中的u-->
+                                            <td style="text-align: center" class="self-td" th:text="${m.id}"/>
+                                            <td style="text-align: center" class="self-td" th:text="${m.price}"/>
+                                            <td style="text-align: center" class="self-td" th:text="${m.name}"/>
+                                            <td style="text-align: center" class="self-td" th:text="${m.ups_and_downs}"/>
+                                            <td style="text-align: center"><button th:onclick="changeModal([[${m.id}]], [[${m.name}]], [[${m.price}]], [[${m.ups_and_downs}]])" data-toggle="modal" data-target=".bs-example-modal-center" type="button" class="btn btn-outline-info waves-effect waves-light">购买</button></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="modal fade bs-example-modal-center" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title mt-0">确定要购买这支股票吗？</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body" style="margin-left: 20px;">
+                        <p>股票编号：<span id="id"></span></p>
+                        <p>股票价格：<span id="price"></span></p>
+                        <p>股票名称：<span id="name"></span></p>
+                        <p>股票涨跌：<span id="rate"></span></p>
+                        <input id="amount" class="form-control" placeholder="请输入购买数量..">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" onclick="buyStock()" class="btn btn-primary">提交</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- end row -->
+    </div>
+    <!-- end container-fluid -->
+</div>
+<!-- end wrapper -->
+
+<!-- Footer -->
+<footer class="footer">
+    © 2019 Zegva <span class="d-none d-sm-inline-block"> - Crafted with <i class="mdi mdi-heart text-danger"></i> By <a href="/">bootstrapmb</a></span>.
+</footer>
+
+<!-- End Footer -->
+<script>
+function changeModal(id, name, price, rate) {
+    // alert(id + " " + name + " " + price + " rate");
+    $('#id').html(id);
+    $('#id').val(id);
+    $('#name').html(name);
+    $('#price').html(price);
+    $('#rate').html(rate);
+}
+
+function buyStock() {
+    $.ajax({
+        url: "/user/trade/buy",
+        type: 'GET',
+        data: {
+            stockid: $('#id').html(),
+            amount: $('#amount').val()
+        },
+        contentType: 'application/json;charset=utf-8',
+        dataType: "text",
+        success: function(data){
+            if(data == "success") {
+                alert("购买成功！");
+                window.location.href = "/user/trade/mystocks";
+            }else {
+                alert("购买失败！");
+                // 页面刷新
+                window.location.reload();
+            }
+        },
+        error: function (xhr, textStatus, errorThrown) {
+            /*错误信息处理*/
+            alert("进入error---");
+            alert("状态码：" + xhr.status);
+            alert("状态:"+ xhr.readyState);//当前状态,0-未初始化，1-正在载入，2-已经载入，3-数据进行交互，4-完成。
+            alert("错误信息:"+ xhr.statusText );
+            alert("返回响应信息："+ xhr.responseText );//这里是详细的信息
+            alert("请求状态："+textStatus);
+            alert(errorThrown);
+            alert("请求失败");
+        },
+    });
+}
+</script>
+<!-- jQuery  -->
+<script th:src="@{/static/js/jquery.min.js}"></script>
+<script th:src="@{/static/js/bootstrap.bundle.min.js}"></script>
+<script th:src="@{/static/js/jquery.slimscroll.js}"></script>
+<script th:src="@{/static/js/waves.min.js}"></script>
+
+<script th:src="@{/static/js/apexcharts.min.js}"></script>
+<script th:src="@{/static/js/bootstrap-datepicker.min.js}"></script>
+
+<!-- Required datatable js -->
+<script th:src="@{/static/js/jquery.dataTables.min.js}"></script>
+<script th:src="@{/static/js/dataTables.bootstrap4.min.js}"></script>
+<!-- Buttons examples -->
+<script th:src="@{/static/js/dataTables.buttons.min.js}"></script>
+<script th:src="@{/static/js/buttons.bootstrap4.min.js}"></script>
+<script th:src="@{/static/js/jszip.min.js}"></script>
+<script th:src="@{/static/js/pdfmake.min.js}"></script>
+<script th:src="@{/static/js/vfs_fonts.js}"></script>
+<script th:src="@{/static/js/buttons.html5.min.js}"></script>
+<script th:src="@{/static/js/buttons.print.min.js}"></script>
+<script th:src="@{/static/js/buttons.colVis.min.js}"></script>
+<!-- Responsive examples -->
+<script th:src="@{/static/js/dataTables.responsive.min.js}"></script>
+<script th:src="@{/static/js/responsive.bootstrap4.min.js}"></script>
+
+<!-- Datatable init js -->
+<script th:src="@{/static/js/datatables.init.js}"></script>
+
+<!-- App js -->
+<script th:src="@{/static/js/app.js}"></script>
+</body>
+</html>

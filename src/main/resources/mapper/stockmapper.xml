@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.StockInfoDao">
+
+    <resultMap id="StockInfoMap" type="com.pojo.StockInfo">
+        <result column="date" property="datetime" jdbcType="TIMESTAMP" javaType="java.sql.Date"/>
+        <result column="closing_price" property="closing_price" jdbcType="DOUBLE"/>
+        <result column="highese_price" property="highese_price" jdbcType="DOUBLE"/>
+        <result column="lowest_price" property="lowest_price" jdbcType="DOUBLE"/>
+        <result column="opening_price" property="opening_price" jdbcType="DOUBLE"/>
+        <result column="previous_close" property="previous_close" jdbcType="DOUBLE"/>
+        <result column="ups_and_downs" property="ups_and_downs" jdbcType="DOUBLE"/>
+        <result column="quote_change" property="quote_change" jdbcType="DOUBLE"/>
+        <result column="turnover_rate" property="turnover_rate" jdbcType="DOUBLE"/>
+        <result column="volume" property="volume" jdbcType="BIGINT"/>
+        <result column="turnover" property="turnover" jdbcType="DOUBLE"/>
+        <result column="ttmc" property="ttmc" jdbcType="DOUBLE"/>
+        <result column="cmc" property="cmc" jdbcType="DOUBLE"/>
+    </resultMap>
+
+    <select id="getStockInfoList" parameterType="String" resultMap="StockInfoMap">
+        select * from srproject.${_parameter} limit 0,10
+    </select>
+
+    <select id="getStockInfoListLimited" resultMap="StockInfoMap">
+        select * from srproject.${id} limit 0,${limit}
+    </select>
+
+    <select id="getStockInfoListByDate" resultMap="StockInfoMap">
+        select * from srproject.${id} where date between ${t1} AND ${t2}
+    </select>
+
+    <update id="createTable" parameterType="String">
+        CREATE TABLE `${id}`(
+                                `date` datetime DEFAULT NULL,
+                                `closing_price` double DEFAULT NULL,
+                                `highese_price` double DEFAULT NULL,
+                                `lowest_price` double DEFAULT NULL,
+                                `opening_price` double DEFAULT NULL,
+                                `previous_close` double DEFAULT NULL,
+                                `ups_and_downs` double DEFAULT NULL,
+                                `quote_change` double DEFAULT NULL,
+                                `turnover_rate` double DEFAULT NULL,
+                                `volume` bigint DEFAULT NULL,
+                                `turnover` double DEFAULT NULL,
+                                `ttmc` double DEFAULT NULL,
+                                `cmc` double DEFAULT NULL
+        )ENGINE = INNODB DEFAULT CHARSET =utf8;
+    </update>
+</mapper>
